@@ -1,0 +1,60 @@
+{
+  "name": "@oracle/trace-propagator",
+  "version": "0.4.1",
+  "description": "Utility for building headers for various formats of tracing propagation",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oracle/trace-propagator.git"
+  },
+  "keywords": [
+    "tracing",
+    "typescript",
+    "utilities"
+  ],
+  "author": "Ben Knear",
+  "license": "UPL-1.0",
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.2",
+    "jest": "^29.2.2",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".test.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 40,
+        "functions": 40,
+        "lines": 50,
+        "statements": 60
+      }
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
